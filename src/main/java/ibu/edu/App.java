@@ -46,7 +46,7 @@ public class App {
         //Recursive Merge sort
         long start = System.currentTimeMillis();
 
-        RecursiveMergeSort.sort(ipAddressesRecursiveMerge);
+        RecursiveMergeSort.sort(ipAddressesRecursiveMerge, new sortByName());
 
         for (int a = 0; a < ipAddressesRecursiveMerge.length; a++) {
             recursiveMergeFileWriter.write("\"" + ipAddressesRecursiveMerge[a].ipFrom + "\"," + "\"" + ipAddressesRecursiveMerge[a].ipTo + "\"," + "\"" + ipAddressesRecursiveMerge[a].countryCode + "\"," + "\"" + ipAddressesRecursiveMerge[a].countryName + "\"," + "\"" + ipAddressesRecursiveMerge[a].regionName + "\"," + "\"" + ipAddressesRecursiveMerge[a].cityName + "\n");
@@ -57,7 +57,7 @@ public class App {
         //Bottom-Up Merge sort
         start = System.currentTimeMillis();
 
-        BottomUpMergeSort.sort(ipAddressesBottomUpMerge);
+        BottomUpMergeSort.sort(ipAddressesBottomUpMerge, new sortByName());
 
         for (int b = 0; b < ipAddressesBottomUpMerge.length; b++) {
             bottomUpMergeFileWriter.write("\"" + ipAddressesBottomUpMerge[b].ipFrom + "\"," + "\"" + ipAddressesBottomUpMerge[b].ipTo + "\"," + "\"" + ipAddressesBottomUpMerge[b].countryCode + "\"," + "\"" + ipAddressesBottomUpMerge[b].countryName + "\"," + "\"" + ipAddressesBottomUpMerge[b].regionName + "\"," + "\"" + ipAddressesBottomUpMerge[b].cityName + "\n");

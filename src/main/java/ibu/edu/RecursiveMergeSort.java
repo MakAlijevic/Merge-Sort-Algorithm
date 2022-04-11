@@ -1,7 +1,7 @@
 package ibu.edu;
 
 public class RecursiveMergeSort {
-    public static void sort(IPAddress[] elements) {
+    public static void sort(IPAddress[] elements, sortByName sortByName) {
         int elementsLength = elements.length;
 
         if(elementsLength < 2){
@@ -19,8 +19,8 @@ public class RecursiveMergeSort {
             rightArray[j-mid] = elements[j];
         }
 
-        sort(leftArray);
-        sort(rightArray);
+        sort(leftArray, new sortByName());
+        sort(rightArray, new sortByName());
 
         merge(elements, leftArray, rightArray);
     }

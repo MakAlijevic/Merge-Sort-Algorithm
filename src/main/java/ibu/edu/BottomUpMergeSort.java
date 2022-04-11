@@ -1,7 +1,7 @@
 package ibu.edu;
 
 public class BottomUpMergeSort {
-    public static void sort(IPAddress[] elements) {
+    public static void sort(IPAddress[] elements, sortByName sortByName) {
 
         IPAddress[] aux = new IPAddress[elements.length];
 
