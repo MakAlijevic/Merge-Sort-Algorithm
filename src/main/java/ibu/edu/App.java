@@ -45,6 +45,7 @@ public class App {
 
         //Recursive Merge sort
         long start = System.currentTimeMillis();
+
         RecursiveMergeSort.sort(ipAddressesRecursiveMerge);
 
         for (int a = 0; a < ipAddressesRecursiveMerge.length; a++) {
